@@ -1,0 +1,199 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+}
+
+.head,
+.left_arm,
+.torso,
+.right_arm,
+.left_leg,
+.right_leg {
+	 background-color: #065366;
+}
+
+.head {
+	width: 200px;
+	margin: 0 auto;
+	height: 150px;
+	border-radius: 100px 100px 50px 50px;
+	margin-bottom: 10px;
+}
+
+.bow{
+	display: flex;
+}
+
+.bow_left {
+	margin-top: 15px;
+	width: 40px;
+	height:40px;
+	background-color: #EBBF0C;
+	border-radius: 40px 40px 0px 40px;
+	transform: rotate(-65deg);
+}
+
+.bow_right {
+	width: 40px;
+	height:40px;
+	background-color: #EBBF0C;
+	border-radius: 40px 40px 40px 0px;
+	transform: rotate(25deg);
+}
+
+.eyes {
+
+}
+
+.head:hover {
+	transform: rotate(15deg);
+    transition: 1s ease-in-out;
+}
+
+.upper_body {
+	width: 300px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	animation-name: dance;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+.left_arm, .right_arm {
+	width: 35px;
+	height: 125px;
+	border-radius: 100px;
+	margin-top: 20px;
+}
+
+.left_arm {
+	margin-right: 10px;
+}
+
+.left_arm:hover {
+	margin-top: 5px;
+	transition: 0.2s;
+}
+
+.right_arm {
+	margin-left: 10px;
+}
+
+.right_arm:hover {
+	margin-top: 5px;
+	transition: 0.2s;
+}
+
+.torso {
+	width: 170px;
+	height: 200px;
+	border-radius: 50px 50px 50px 50px;
+}
+
+.heart{
+	margin-left: 90px;
+	margin-top: 35px;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	animation-name: beat;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.heart_left{
+	width: 60px;
+	height: 30px;
+	background-color: #F586AC;
+	border-radius: 60px 0 0 60px;
+	transform: rotate(45deg);
+}
+
+.heart_right{
+	position: relative;
+	margin-left: -35px;
+	width: 60px;
+	height: 30px;
+	background-color: #F586AC;
+	border-radius: 0 60px 60px 0;
+	transform: rotate(-45deg);
+}
+
+.lower_body {
+	width: 200px;
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex;
+
+}
+
+.left_leg, .right_leg {
+	width: 40px;
+	height: 120px;
+	border-radius: 0 0 100px 100px;
+}
+
+.left_leg {
+	margin-left: 45px;
+}
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg {
+	margin-left: 30px;
+}
+
+.left_eye, .right_eye {
+	width: 20px;
+	height: 20px;
+	border-radius: 15px;
+	background-color: white;
+	display: inline-block;
+}
+
+.left_eye {
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative;
+	top: 30px;
+	left: 40px;
+}
+
+.right_eye {
+	position: relative;
+	top: 30px;
+	left: 120px;
+}
+
+@keyframes dance {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.8);
+	}
+}
